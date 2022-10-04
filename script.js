@@ -11,26 +11,25 @@ button.addEventListener('click', function (){
     //displays content in table
     let userInput = input.value;
     const toDoItem = document.createElement('tr');
+    const deleteButton = document.createElement('button');
+    deleteButton.classList.add('delete-button');
+    toDoItem.classList.add('to-do-item');
+
 
     toDoItem.innerHTML = `
-    <td>${userInput}</td>
-    <td><a href='#' class='btn btn-danger btn-sm delete'>X</a></td>`;
+    <td>${userInput}</td>`;
+
+    // deleteButton.innerHTML = `<td><td>`
+    
 
     table.appendChild(toDoItem);
+    toDoItem.appendChild(deleteButton);
+
+    deleteButton.addEventListener('click', function() {
+        toDoItem.remove();
+    })
 
     // clear fields
     input.value = '';
 })
 
-// validate
-
-// completely delete to do item
-table.addEventListener('click', e => {
-    console.log('butt');
-})
-
-// deleteToDo(el) {
-//     if(el.classlist.contains('delete')) {
-//         el.parentElement.parentElement.remove()
-//     }
-// }
