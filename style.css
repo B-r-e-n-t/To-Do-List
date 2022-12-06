@@ -1,14 +1,35 @@
+/* #62E16D #348572 #2E6D9E */
+
 html {
     box-sizing: border-box;
     height: 100vh;
     width: 100vw;
+    background-color: #2e6d9e;
+}
+
+.create-a-list-button {
+    font-size: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+}
+
+.create-a-list-button:hover {
+    cursor: pointer;
 }
 
 .big-container {
     margin-right: 150px;
     margin-left: 150px;
     margin-top: 20px;
-    background-color: aquamarine;
+    background-color: #348572;
+}
+
+.big-container h2 {
+    text-align: center; 
+    margin-top: 15px;
 }
 
 .container {
@@ -16,30 +37,73 @@ html {
     justify-content: center;
     gap: 15px;
     margin-top: 15px;
+    padding: 25px;
 }
 
-.input {
+.list-item-input {
     width: 500px;
     height: 35px;
     font-size: 20px;
 }
 
-.button {
+.add-to-list-button {
     width: 100px;
     height: 40px;
 }
 
 .thead {
-    width: 600px;
+    width: 200px;
 }
 
 .delete-button {
     color: black;
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     text-align: center;
+    margin-left: 50px;
+}
+
+.to-do-item {
+    margin: 25px;
+    font-size: 30px;
 }
 
 #to-do-list {
     width: 400px;
 }
+
+#modal {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%; /* Full width */
+    height: 30%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #348572; /* Black w/ opacity */
+    border: 2px solid black;
+}
+
+#modal h2{
+    text-align: center; 
+    margin-top: 15px;
+}
+
+/* . {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  } */
+
+  .card {
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+  }
